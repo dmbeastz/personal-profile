@@ -4,7 +4,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     background: hsl(0, 0%, 0%);
     color: #fff;
@@ -304,7 +306,7 @@ nav ul li a:hover::after {
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: black;
+    color:  white;
     display: inline-block;
     transition: transform 0.5s;
 }
@@ -368,3 +370,126 @@ form input, form textarea {
 }
 
 /* ------------css for small screens----------- */
+
+nav .fas{
+    display: none;
+}
+nav i {
+    display: none;
+}
+
+@media only screen and (max-width :600px) {
+    
+   
+    #header {
+    background-image: none;
+        }
+        
+    img[src$="Copy-Personal-Pictures/Icon .gif"] {
+    display: none;
+    } 
+
+    #header {
+        align-items: center;
+        height: 100px; /* Adjust this value according to your needs */
+        background-color: black;
+        margin-bottom: 140px;
+         
+    }
+    
+    #header::after {
+        content: "Hello, My name is Dave Roy";
+        font-size: 60px; /* Adjust this value according to your needs */
+        color: #fff00f; 
+        margin-top: 100%;/* Adjust this value according to your needs */
+        margin-bottom: 100%;
+    }
+    
+
+    nav .fas{
+        display: none;
+        font-size: 25px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        cursor: pointer;
+    }
+    nav ul {
+        background-color: #fff00f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+        
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    nav ul li a {
+        color: black;
+        
+    }
+    nav ul i{
+        color: black;
+        font-size: 25px;
+    }
+    
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1,.about-col-2{
+        flex-basis: 100%;
+        
+    }
+    .about-col-1 {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .work-list {
+        display: block;
+    }
+
+    @media only screen and (max-width :600px) {
+        .work-list {
+            display: block;
+        }
+    }
+
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+    
+    .copyright {
+        font-size: 14px;
+    }
+}
+
+#msg {
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}

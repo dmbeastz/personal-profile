@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
       </style>
       <script src="https://kit.fontawesome.com/d3ccee1295.js" crossorigin="anonymous"></script>
 </head>
@@ -15,17 +16,20 @@
     <header id="header">
         <div class="container">
             <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact Me</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <img src="Copy-Personal-Pictures/Icon .gif" alt="Icon">
         </div>
     </header>
+    <!-- About Section -->
     <div id="about">
         <div class="container">
             <div class="row">
@@ -139,12 +143,13 @@
             <a href="" download class="btn btn3">Download CV</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form name = "submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name"required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="Message" id="" rows="6" placeholder="Your Message"></textarea>
+                    <!-- <input type="email" name="Email" placeholder="Your Email" required> -->
+                    <textarea name="Message" id="" rows="6" placeholder="Your Message and gmail"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
@@ -172,14 +177,53 @@
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 }
-
-
-
-
-
     </script>
 
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
 
+        function openmenu () {
+            sidemeu.style.right = "0";
+        } 
+
+        function closemenu () {
+            sidemeu.style.right = "-200px";
+        } 
+
+    </script>
+    
+    <script>
+        // Define the script URL for Google Sheets
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwobAXnA3pbd1Ms3s2b7ui4-abIikw8mGAv5KtNPdOa-RcUW6cX49O1L_-uuubo2jmV/exec';
+        
+        // Access the form element by its name attribute
+        const form = document.forms['submit-to-google-sheet'];
+    
+        // Access the message element
+        const msg = document.getElementById("msg");
+    
+        // Add submit event listener to the form
+        form.addEventListener('submit', e => {
+            e.preventDefault(); // Prevent the default form submission behavior
+            
+            // Send a POST request to the Google Sheets script URL
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    // Display a success message
+                    msg.innerHTML = "Thank you, your message has been sent successfully.";
+    
+                    // Clear the message after 5 seconds
+                    setTimeout(function(){
+                        msg.innerHTML = "";
+                    }, 5000);
+    
+                    // Reset the form
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+        
 
 </body>
 </html>
