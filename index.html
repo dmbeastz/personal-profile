@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave Mutisya </title>
+    <link rel="icon" href="./Copy-Personal-Pictures/icons8-favicon.gif" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+      </style>
+      <script src="https://kit.fontawesome.com/d3ccee1295.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </nav>
+            <img src="Copy-Personal-Pictures/Icon .gif" alt="Icon">
+        </div>
+    </header>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Copy-Personal-Pictures/user.jpeg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>👋 Welcome! I'm a dedicated full stack web developer specializing in frontend development, with ongoing exploration in backend technologies spanning 6 months/ 1 year.
+
+                    <br>💻 I'm fueled by a passion for continual learning and thrive on tackling new challenges in the ever-evolving landscape of software development. Let's collaborate to create impactful solutions together! </br>
+                    </p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span>Proficient in Language:</span>
+                                HTML, CSS, JavaScript, Python, React, and Flask
+                            </li>   
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span>January 2024 - Current:</span>
+                                Currently I am a freelance full-stack software developer  working on various projects to sharpen my acquire skills
+                            </li>   
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <span>September 2023 - January 2024:</span>
+                                Went through the Moringa  School's Web Development Immersive program where I learned how to build websites using various languages.
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------------Services---------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Application Development</h2>
+                    <p>As a full-stack developer, I specialize in crafting dynamic and interactive web applications. Leveraging my expertise in frontend technologies like HTML, CSS, and JavaScript, as well as frameworks such as React, I create seamless user experiences. On the backend, I utilize languages like Node.js and Python to develop robust server-side logic, ensuring optimal functionality.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Database Design and Management</h2>
+                    <p>I excel in designing and implementing efficient database solutions tailored to the needs of your web applications. Whether it's relational databases like MySQL or NoSQL databases like MongoDB, I architect databases that optimize data storage, retrieval, and management, ensuring scalability and performance.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-star"></i>
+                    <h2>Testing and Quality Assurance</h2>
+                    <p>Quality is paramount in the development process, and I employ rigorous testing methodologies to ensure the reliability, functionality, and security of your web applications. With thorough unit testing, integration testing, and end-to-end testing, I guarantee a seamless user experience.</p>
+                    <a href="#">Learn more</a>
+                </div>                
+            </div>
+        </div>
+    </div>
+<!-- ----------------portfolio--------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Portfolio</h1>
+        <div class="work-list">
+            <a href="https://bookhavenproject.netlify.app/" class="work" target="_blank">
+                <div>
+                    <i class="fa-solid fa-book-open-reader"></i>
+                    <h3>Book Haven</h3>
+                    <p>Book Haven is a web application that allows users to explore and purchase books online.
+                        <p> PS: Click for more <i class="fa-solid fa-face-smile-wink"></i></p>
+                    </p>
+                </div>
+            </a>
+            <a href="https://find-a-flick.netlify.app/" class="work" target="_blank">
+                <div>
+                    <i class="fa-solid fa-image"></i>
+                    <h3>Find a Pic</h3>
+                    <p>Find a Flick is a web app powered by a Unsplash API. This web app allows users to search for images based on their input data.<br><p> PS: Click for more <i class="fa-solid fa-face-smile-wink"></i></p></p><br></p>
+                </div>
+            </a>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<!-- --------------Contact Me---------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>daveroymutisya2@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>0728646414</p>
+            <div class="social-icons">
+                    <a href="https://www.instagram.com/issthatdaveroy/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="" download class="btn btn3">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name"required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" id="" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Dave. Made with <i class="fa-solid fa-u"></i> in <i class="fa-solid fa-brain"></i> .by Dave Mutisya</p>
+    </div>
+</div>
+
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents ")
+
+        function opentab(event, tabname) {
+    for (let tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+
+    for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
